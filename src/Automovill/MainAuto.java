@@ -10,7 +10,7 @@ package Automovill;
  */
 public class MainAuto {
     public static void main(String[] args) {
-  // Crear instancia de AutoMovil
+  //Aqui se crea la instancia de Automovil
         Automovil auto = new Automovil();
         auto.setMarca("Toyota");
         auto.setModelo("Corolla");
@@ -22,16 +22,18 @@ public class MainAuto {
         auto.Arrancar();
 
         System.out.println("\n--- Honda Civic ---");
-        // Crear instancia de HondaCivic
-        HondaCivic honda = new HondaCivic();
-        honda.setMarca("Honda");
-        honda.setModelo("Civic");
+  //Y aqui se crea la instancia hija de HondaCivic
+        HondaCivic honda = new HondaCivic("","","",0,false);
+        
+        honda.getModelo();
         honda.setAnio(2024);
         honda.setColor("Rojo");
 
         System.out.println("Marca: " + honda.getMarca());
-        honda.Prender(); // Método sobrescrito
-        honda.Arrancar(); // Método sobrescrito
+        System.out.println("Anio: " + honda.getAnio());
+        honda.Prender(); 
+        honda.Arrancar();
+        honda.Apagar();
       
     }
 }
